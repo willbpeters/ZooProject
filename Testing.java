@@ -4,6 +4,7 @@ public class Testing
     {
         // create the linked list
         LinkedList zoo = new LinkedList();
+        LinkedList emptyZoo = new LinkedList();
 
         // create 10 animals
         Animal a1 = new Animal(1, "Scruffy", "Ringtail", Category.MAMMAL, Diet.OMNIVORE, 180);
@@ -41,9 +42,14 @@ public class Testing
         Animal r2 = zoo.RemoveHead();
         System.out.println(r2.description());
         
-
         // print the list after removals
         System.out.println("\n=== List After Removals ===");
         System.out.println(zoo.ToList());
+
+        // check for emtpy list
+        System.out.println("=== Checking for empty list ===");
+        System.out.println("Is the zoo empty? " + zoo.IsEmpty());
+        System.out.println("Is the empty zoo empty? " + emptyZoo.IsEmpty());
+
     }
 }
