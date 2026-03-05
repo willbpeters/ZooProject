@@ -6,16 +6,16 @@ public class Testing
         LinkedList zoo = new LinkedList();
 
         // create 10 animals
-        Animal a1 = new Animal(1, "Scruffy", "Ringtail", "mammal", "omnivore", 180);
-        Animal a2 = new Animal(2, "Goldie", "Goldfish", "aquatic", "herbivore", 20);
-        Animal a3 = new Animal(3, "Rex", "Iguana", "ectotherm", "herbivore", 35);
-        Animal a4 = new Animal(4, "Buzzy", "Honeybee", "bug", "herbivore", 10);
-        Animal a5 = new Animal(5, "Polly", "Parrot", "bird", "omnivore", 45);
-        Animal a6 = new Animal(6, "Dumbo", "Elephant", "mammal", "herbivore", 900);
-        Animal a7 = new Animal(7, "Nemo", "Clownfish", "aquatic", "carnivore", 30);
-        Animal a8 = new Animal(8, "Shelley", "Tortoise", "ectotherm", "herbivore", 60);
-        Animal a9 = new Animal(9, "Webby", "Tarantula", "bug", "carnivore", 15);
-        Animal a10 = new Animal(10, "Leo", "Lion", "mammal", "carnivore", 700);
+        Animal a1 = new Animal(1, "Scruffy", "Ringtail", Category.MAMMAL, Diet.OMNIVORE, 180);
+        Animal a2 = new Animal(2, "Goldie", "Goldfish", Category.AQUATIC, Diet.HERBIVORE, 20);
+        Animal a3 = new Animal(3, "Rex", "Iguana", Category.ECTOTHERM, Diet.HERBIVORE, 35);
+        Animal a4 = new Animal(4, "Buzzy", "Honeybee", Category.BUG, Diet.HERBIVORE, 10);
+        Animal a5 = new Animal(5, "Polly", "Parrot", Category.BIRD, Diet.OMNIVORE, 45);
+        Animal a6 = new Animal(6, "Dumbo", "Elephant", Category.MAMMAL, Diet.HERBIVORE, 900);
+        Animal a7 = new Animal(7, "Nemo", "Clownfish", Category.AQUATIC, Diet.CARNIVORE, 30);
+        Animal a8 = new Animal(8, "Shelley", "Tortoise", Category.ECTOTHERM, Diet.HERBIVORE, 60);
+        Animal a9 = new Animal(9, "Webby", "Tarantula", Category.BUG, Diet.CARNIVORE, 15);
+        Animal a10 = new Animal(10, "Leo", "Lion", Category.MAMMAL, Diet.CARNIVORE, 700);
 
 
         // Add animals To the list using both AddHead and AddTail
