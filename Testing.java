@@ -1,7 +1,11 @@
-public class Testing
-{
-    public static void main(String[] args)
-    {
+
+/*
+CSC130 Zoo Project
+William Peters
+*/
+
+public class Testing{
+    public static void main(String[] args){
         // create the linked list
         LinkedList zoo = new LinkedList();
         LinkedList emptyZoo = new LinkedList();
