@@ -23,6 +23,10 @@ public class Animal {
         this.cost     = cost;
     }
  
+    //getter
+    public Category getCategory(){ //Could be replaced with a boolean method that checks catgory if this needed to be more secure, not neccesary for this project though
+        return this.category;
+    }
     // returns the animals nickname + its species as a string
     public String nickname(){
         return this.name + " the " + this.species;

@@ -1,7 +1,5 @@
 public class LinkedList{
-    
     private class Node{
-
         public Animal data;  //identifes animal stored in node
         public Node next;  //pointer to next next node
 
@@ -99,6 +97,32 @@ public class LinkedList{
         }
 
         return result;
+    }
+
+    //duplicates the list and returns it
+    public LinkedList Duplicate(){
+        LinkedList newList = new LinkedList();
+        Node current = this.head; //starts at head
+        while(current != null){
+            newList.AddTail(current.data); //adds current node's data to the tail of the new list
+            current = current.next; //moves to next node
+        }
+        return newList;
+    }
+    //duplicates the list and returns it for the specified category
+    public LinkedList Duplicate(Category category){
+        LinkedList newList = new LinkedList();
+        Node current = this.head; //starts at head
+        while(current != null){
+            if(current.data.getCategory() == category){
+                newList.AddTail(current.data); //adds current node's data to the tail of the new list
+                current = current.next; //moves to next node
+            } else {
+                current = current.next; //moves to next node
+            }
+            
+        }
+        return newList;
     }
 
 }//end LinkedList class

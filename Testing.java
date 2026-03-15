@@ -55,5 +55,48 @@ public class Testing{
         System.out.println("Is the zoo empty? " + zoo.IsEmpty());
         System.out.println("Is the empty zoo empty? " + emptyZoo.IsEmpty());
 
+        //Project 2 tests
+        //duplicate the list and print it
+        System.out.println("\n=== Duplicating the list ===");
+        LinkedList duplicateZoo = zoo.Duplicate();
+        System.out.println(duplicateZoo.ToList());
+        System.out.println("Is the duplicate the same as the original? " + duplicateZoo.ToList().equals(zoo.ToList()));
+
+        //filter the list by category and print it
+        System.out.println("\n=== Filtering the list by category (MAMMAL) ===");
+        LinkedList filteredZoo = zoo.Duplicate(Category.MAMMAL);
+        System.out.println(filteredZoo.ToList());
+
+        //zoo class tests
+        System.out.println("\n=== Testing Zoo class ===");
+        Zoo myZoo = new Zoo();
+        myZoo.add(a1);
+        myZoo.add(a2);
+        myZoo.add(a3);
+        myZoo.add(a4);
+        myZoo.add(a5);
+        myZoo.add(a6);
+        myZoo.add(a7);
+        myZoo.add(a8);
+        myZoo.add(a9);
+        myZoo.add(a10);
+        System.out.println("=== Zoo List ===");
+        System.out.println(myZoo.ToList());
+
+        // feed all animals
+        System.out.println("=== Feeding all animals ===");
+        myZoo.startFeeding();
+        while(!myZoo.doneFeeding()){
+            Animal fed = myZoo.feedNext();
+            System.out.println("Fed " + fed.nickname());
+        }
+
+        // feed only mammals
+        System.out.println("\n=== Feeding mammals only ===");
+        myZoo.startFeeding(Category.MAMMAL);
+        while(!myZoo.doneFeeding()){
+            Animal fed = myZoo.feedNext();
+            System.out.println("Fed " + fed.nickname());
+        }
     }
 }
